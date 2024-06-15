@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkmode</title>
+</head>
+<body>
+    <h1 id="header">CLICK TO CHANGE TO DARKMODE AND NORMAL MODE</h1>
+    <div class="container">
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">
+            <div class="box">
+                <div class="ball"></div>
+            </div>
+        </label>
+    </div>
+
+    <h1 id="h2"> STOP WATCH</h1>
+    <div class="timer">
+
+        <div class="timerbody">
+            <span id="hour">00 :</span>
+            <span id="min">00 :</span> 
+            <span id="sec">00</span>
+        </div>
+        <div class="buttons">
+            <button id="start" type="button">start</button>
+            <button id="stop" type="button">stop</button>
+            <button id="reset" type="button">reset</button>
+        </div>
+    
+
+</div>
+<style>
+#h2{
+    position: relative;
+    bottom: 170px;
+    right: -750px;
+    color: red;
+}
+    .timer span {
+        position: relative;
+        top: 90px;
+        width: 70px;
+        height: 100px;
+        color: white;
+    }
+
+    .buttons {
+        margin-top: 20px;
+        width: 200px;
+        display: flex;
+        justify-content: space-around;
+        background-color: red;
+        position: absolute;
+        top: 200px;
+    }
+    .timer {
+        border: 3px solid red;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        right: 400px;
+        bottom: 300px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: black;
+    }
+    .container {
+        background-color: blueviolet;
+        width: 300px;
+        border-radius: 50px;
+        height: 150px;
+    }
+    #checkbox {
+        display: none;
+    }
+    .box {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 150px;
+        background-color: aquamarine;
+        border-radius: 59px;
+        cursor: pointer;
+    }
+    #header {
+        font-size: 109%;
+    }
+    .ball {
+        width: 135px;
+        height: 135px;
+        background-color: white;
+        border-radius: 50%;
+        border: 3px solid black;
+        transition: transform 0.5s ease, background-color 0.5s ease; /* Adding transition for smooth movement and color change */
+    }
+</style>
+
+<script>
+    // Stopwatch functionality
+    let hourEl = document.querySelector('#hour');
+    let minEl = document.querySelector('#min');
+    let secEl = document.querySelector('#sec');
+    let startBtn = document.querySelector("#start");
+    let stopBtn = document.querySelector("#stop");
+    let resetBtn = document.querySelector("#reset");
+
+    let timer;
+    let totalSeconds = 0;
+
+    function updateTime() {
+        totalSeconds++;
+        let hours = Math.floor(totalSeconds / 3600);
+        let minutes = Math.floor((totalSeconds % 3600) / 60);
+        let seconds = totalSeconds % 60;
+
+        hourEl.textContent = (hours < 10 ? "0" + hours : hours) + " :";
+        minEl.textContent = (minutes < 10 ? "0" + minutes : minutes) + " :";
+        secEl.textContent = (seconds < 10 ? "0" + seconds : seconds);
+    }
+
+    startBtn.addEventListener('click', function() {
+        if (!timer) {
+            timer = setInterval(updateTime, 1000);
+        }
+    });
+
+    stopBtn.addEventListener('click', function() {
+        clearInterval(timer);
+        timer = null;
+    });
+
+    resetBtn.addEventListener('click', function() {
+        clearInterval(timer);
+        timer = null;
+        totalSeconds = 0;
+        hourEl.textContent = "00 :";
+        minEl.textContent = "00 :";
+        secEl.textContent = "00";
+    });
+
+    // Dark mode toggle
+    let check = document.querySelector("#checkbox");
+    let ball = document.querySelector(".ball");
+    let header = document.querySelector("#header");
+
+    check.addEventListener('change', function() {
+        if (this.checked) {
+            ball.style.transform = "translateX(100%)";
+            ball.style.backgroundColor = "black";
+            header.style.color = "white";
+            document.body.style.backgroundColor = "black";
+        } else {
+            ball.style.transform = "translateX(0%)";
+            ball.style.backgroundColor = "white";
+            header.style.color = "black";
+            document.body.style.backgroundColor = "white";
+        }
+    });
+</script>
+
+</body>
+</html>
