@@ -1,0 +1,11 @@
+.block{
+    width: 140px;
+    background-color: blue;
+    color: white;
+    font-size: larger;
+    position :absolute;
+    cursor: move;
+    top: 50px;
+    left: 90px;
+   
+}

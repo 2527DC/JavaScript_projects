@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-secondary">
+    
+
+    <div class="container  ">
+  
+    <p class="text-wrap">Enter your text or url</p>
+    <input type="text" name="" placeholder="text or url" id="qrtext">
+    <button ] onclick="generateQR()"> Generate QR code</button>
+    <div class="imgbox">
+
+        <img src="" alt="" id="qrlImage">
+
+    </div>
+  
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+
+        .container{
+            background-color: aliceblue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            bottom: 10%;
+            transform: translate(-40%,-40%);
+            width:400px;
+            height: 330px;
+            border-radius: 10px;
+        }
+        .container p{
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .container input
+        {
+            width: 100%;
+            height: 50px;
+            border:  1px solid black;
+            outline: 0;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border-radius: 5px;
+        }
+        
+        .container button{
+            color: yellow;
+            width: 100%;
+            height: 50px;
+            background-color: blue;
+            cursor: pointer;
+            margin:  1px;
+            font-weight: 500 ;
+            border-radius: 5px;
+        }
+
+       .container img{
+
+        margin-left: 120px;
+       }
+    </style>
+
+    <script>
+
+        let img=document.getElementById("imgbox");
+        let qrcode=document.getElementById("qrlImage");
+        let qrtext=document.getElementById("qrtext");
+
+function generateQR(){
+
+qrlImage.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+qrtext.Value
+
+}
+
+
+    </script>
+</body>
+</html>

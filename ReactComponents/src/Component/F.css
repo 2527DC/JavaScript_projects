@@ -1,0 +1,76 @@
+.circularMenu {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 2%;
+    height: 2%;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Ensures that only the items and button are clickable */
+  
+}
+
+.circle-button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(255, 167, 255);
+    border-left: 1px solid #a12222;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.menu-item {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(221, 207, 207);
+    border-left: 1px solid #a12222;
+    border-bottom: 1px solid #a12222;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    pointer-events: auto; /* Make the items clickable */
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.navicon {
+    cursor: pointer;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+
+.cancelicon {
+    transition: 0.8s;
+}
+
+.cancelicon:hover {
+    animation: rotate-animation 1s infinite ; /* Apply continuous rotation on hover */
+}
+
+/* Keyframes for continuous rotation */
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

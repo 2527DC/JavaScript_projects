@@ -1,0 +1,149 @@
+.container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-family: 'Creepster', cursive;
+    font-size: 3em;
+    color: #FF5733;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .subtitle {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2em;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text {
+    font-size: 1.5em;
+    margin: 15px 0;
+    animation: bounceIn 1s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+  }
+  
+  /* Unique styles for each font */
+  .creepster {
+    font-family: 'Creepster', cursive;
+    color: #FF5733;
+  }
+  
+  .abril {
+    font-family: 'Abril Fatface', serif;
+    color: #4A90E2;
+  }
+  
+  .quicksand {
+    font-family: 'Quicksand', sans-serif;
+    color: #7ED321;
+  }
+  
+  .sacramento {
+    font-family: 'Sacramento', cursive;
+    color: #F39C12;
+  }
+  
+  .rockSalt {
+    font-family: 'Rock Salt', cursive;
+    color: #8E44AD;
+  }
+  
+  .bitter {
+    font-family: 'Bitter', serif;
+    color: #E74C3C;
+  }
+  
+  .fredericka {
+    font-family: 'Fredericka the Great', cursive;
+    color: #3498DB;
+  }
+  
+  .amatic {
+    font-family: 'Amatic SC', cursive;
+    color: #9B59B6;
+  }
+  
+  .dancing {
+    font-family: 'Dancing Script', cursive;
+    color: #E67E22;
+  }
+  
+  .indie {
+    font-family: 'Indie Flower', cursive;
+    color: #1ABC9C;
+  }
+  
+  .lobster {
+    font-family: 'Lobster Two', cursive;
+    color: #34495E;
+  }
+  
+  .satisfy {
+    font-family: 'Satisfy', cursive;
+    color: #F1C40F;
+  }
+  
+  .playball {
+    font-family: 'Playball', cursive;
+    color: #E74C3C;
+  }
+  
+  .specialElite {
+    font-family: 'Special Elite', cursive;
+    color: #2C3E50;
+  }
+  
+  .patua {
+    font-family: 'Patua One', serif;
+    color: #D35400;
+  }
+  
+  .righteous {
+    font-family: 'Righteous', sans-serif;
+    color: #2980B9;
+  }
+  
+  .gloock {
+    font-family: 'Gloock', serif;
+    color: #27AE60;
+  }
+  
+  .bangers {
+    font-family: 'Bangers', cursive;
+    color: #C0392B;
+  }
+  
+  .suez {
+    font-family: 'Suez One', serif;
+    color: #8E44AD;
+  }
+  
+  .pinyon {
+    font-family: 'Pinyon Script', cursive;
+    color: #F39C12;
+  }
+  
+  /* Letter Animation */
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: appear 0.6s forwards;
+  }
+  
+  @keyframes appear {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover effects */
+  .text:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
